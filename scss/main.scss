@@ -1,0 +1,381 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+html {
+    font-size: 62.5%;
+    /*2 rem = 20px*/
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.contenedor{
+    display: grid;
+    grid-template-areas: 
+		"menu menu logo"
+		"galeria galeria galeria"
+		"footer footer footer";
+		/*Vertical*/
+		grid-template-columns:48% 46% auto;
+		/*75% para que el contenodor tome al menu y la galeria*/
+		grid-template-rows:12rem auto 25%;
+		grid-column-gap:1px;
+	    grid-row-gap:1px;
+		align-items:stretch;
+		
+}
+
+main{
+	grid-area:galeria;
+}
+footer{
+	grid-area:footer;
+}
+header{
+	grid-area:menu;
+}
+div{
+	grid-area:logo;
+}
+
+$color1:#b9ffff;
+$color2:#002973;
+.menu{
+	background-image:linear-gradient(to bottom,$color1,$color2);
+	nav{
+		height:100%;
+		width:100%;
+		ul{
+			height:100%;
+			width:100%;
+			display:flex;
+			flex-direction:row;
+			justify-content:space-evenly;
+			align-items:stretch;
+			flex-wrap:wrap;
+			align-content:center;
+			li{
+				text-decoration: none;
+				list-style:none;
+				margin:1.5rem;
+				a{
+					border:2px solid;
+					margin-right:0.12em;
+					padding: 1rem 1.5rem;
+					box-shadow: inset 0px -3px 0px 0px rgba(0, 0, 0, 0.25);
+					text-shadow: 1px 1px 0px #0C749C;
+					border:2px solid;
+					border-color:yellow;
+					font-size: 1.8rem;
+					background-color:#53d4ff;
+					text-transform: uppercase;
+					text-decoration: none;
+					list-style:none;
+					&:hover{
+						background-color:#def7ff;
+					}
+				}
+			}
+		}
+	}
+}
+
+.logo img{
+	height:100%;
+	width:100%;
+}
+
+.galeria{
+	display:flex;
+	flex-direction:row;
+	justify-content:space-evenly;
+	flex-wrap:wrap;
+	section{
+		height:49%;
+		width:32%;
+		article{
+			margin:0.3rem;
+			padding:0.3rem;
+			img{
+				height:19.5rem;
+				/*En porcentajes para que la imagen no se corte*/
+				width:100%;
+				&:hover{
+					opacity: 0.9;
+				}
+			}
+			p{
+				height:4rem;
+				width: 100%;
+				text-align: justify;
+				font-size: 1.5rem;
+			}
+			input{
+				height: 2.5rem;
+    			width: 100%;
+				&:hover{
+					background-color:#def7ff;
+				}
+			}
+		}
+	}
+}
+.modulos{
+	section{
+		h2{
+			font-size: 2.5rem;
+			background-image:linear-gradient(to bottom,$color1,$color2);
+		}
+		table{
+			width: 100%;
+			background-image:linear-gradient(to bottom,#dcdcdc,#97bdf5);
+			th, tr{
+				padding: 0.3rem;
+    			text-align: justify;
+    			font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    			font-size: 2rem;
+				&:hover{
+					background-color: #ddd;
+				}
+				text-align:center;
+			}
+		}
+	}
+}
+
+
+.ubicacion{
+	display:flex;
+	flex-direction:row;
+	justify-content:space-evenly;
+	flex-wrap:wrap;
+	section{
+		article{
+			height:42rem;
+			width:50rem;
+			.mapa{
+				height:40rem;
+				width:55rem;
+			}
+			.liceo{
+				height:40rem;
+				width:55rem;
+			}
+		}
+	}
+}
+
+.form{
+	border:2px solid;
+	height:100%;
+	section{
+		fieldset{
+			form{
+				display:flex;
+				flex-direction:row;
+				justify-content:space-evenly;
+				flex-wrap:wrap;
+
+				label,input,textarea,select{
+					height:3rem;
+					width:100%;
+				}
+			}
+		}
+	}
+	
+}
+
+.footer{
+	display:flex;
+	flex-direction:row;
+	justify-content:space-evenly;
+	flex-wrap:wrap;
+	/*Para separar footer de galeria*/
+	margin-top:1rem;
+	background-color:#bceeff;
+	border:1px solid;
+	section{
+		height:80%;
+		width:23%;
+		margin:0.5rem;
+		article{
+			padding:0.5rem;
+			.footer__section__redes {
+				border:1px solid;
+			}
+			img{
+				height:4.5rem;
+				width:4.5rem;
+				padding-top:0.7rem;
+				animation-name:efecto;
+				animation-iteration-count:infinite;
+				animation-timing-function:ease;
+				animation-duration:5s;
+				animation-delay:3s;
+			}
+
+		}
+	}
+}
+
+@keyframes efecto{
+	0%{width:4.5rem;}
+	25%{width:4rem;}
+	50%{width:3.5rem;}
+	75%{width:4rem;}
+	100%{width:4.5rem;}
+}
+
+@media screen and (max-width:768px){
+    .contenedor{
+        display: grid;
+		grid-template-areas: 
+			"menu logo"
+			"galeria galeria"
+			"footer footer";
+		grid-template-columns:80% auto;
+		grid-template-rows:13rem 75% auto;
+		grid-column-gap:1px;
+	    grid-row-gap:1px;
+		align-items:stretch;
+    }
+}
+
+@media screen and (max-width:768px){
+    .contenedor{
+        display: grid;
+		grid-template-areas: 
+			"menu logo"
+			"galeria galeria"
+			"footer footer";
+		grid-template-columns:80% auto;
+		grid-template-rows:13rem 75% auto;
+		grid-column-gap:1px;
+	    grid-row-gap:1px;
+		align-items:stretch;
+    }
+	.galeria{
+		section{
+			/*Para el alto del section, separa cada foto de manera vertical*/
+			height:31%;
+			width:47%;
+			article{
+				padding:0.3rem;
+				.galeria__item__desc{
+					/*Para que el boton quede siempre en linea (abajo)*/
+					height:5rem;
+					width: 100%;
+					text-align: justify;
+					font-size: 1.5rem;
+				}
+			}
+		}
+	} 
+
+	.footer{
+		section{
+			/*Para el alto del section, separa cada foto de manera vertical*/
+			height:7rem;
+			width:40%;
+			padding:0.1rem;
+		}
+	}
+	.menu{
+		nav{
+			ul{
+				li{
+					margin:1.3rem;
+				}
+			}
+		}
+	}
+
+	
+}
+
+@media screen and (max-width:468px){
+    .contenedor{
+        display: grid;
+		grid-template-areas: 
+			"logo"
+			"menu"
+			"galeria"
+			"footer";
+		grid-template-columns:100%;
+		grid-template-rows:8rem 18rem 75% 15%;
+		grid-column-gap:1px;
+	    grid-row-gap:1px;
+		align-items:stretch;
+    }
+	.galeria {
+		section{
+			height:16.5%;
+			width:100%;
+			article{
+			
+			}
+		}
+	}
+	
+
+	.footer{
+		height:55rem;
+		width:100%;
+		padding:0.1rem;
+		/*
+		border:5px solid;
+		border-color: #002973;
+		*/
+		section{
+			/*Para el alto del section, separa cada foto de manera vertical*/
+			height:18%;
+			width:90%;
+			padding:0.1rem;
+			/*
+			border:5px solid;
+			*/
+		}
+	}
+	
+
+	.contenedor{
+		.logo{
+			height:100%;
+			width:60%;
+			padding-left:7rem;
+		}
+	}
+	.ubicacion{
+		section{
+			height:45%;
+			width:100%;
+			article{
+				height:99%;
+				width:99%;
+				.mapa{
+					height:90%;
+					width:99%;
+				}
+				.liceo{
+					height:90%;
+					width:100%;
+				}
+			}
+		}
+	} 
+	/*
+	.modulos{
+		section{
+			border:2px solid;
+			border-color: red;
+			table{
+				border:2px solid;
+				border-color: blue;
+		
+			}
+		}
+	} 
+	*/
+}

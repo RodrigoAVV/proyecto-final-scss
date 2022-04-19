@@ -1,0 +1,515 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+html {
+    font-size: 62.5%;
+    /*2 rem = 20px*/
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.contenedor{
+    display: grid;
+    grid-template-areas: 
+		"menu menu logo"
+		"galeria galeria galeria"
+		"footer footer footer";
+		/*Vertical*/
+		grid-template-columns:48% 46% auto;
+		/*75% para que el contenodor tome al menu y la galeria*/
+		grid-template-rows:12rem auto 25%;
+		grid-column-gap:1px;
+	    grid-row-gap:1px;
+		align-items:stretch;
+		
+}
+
+main{
+	grid-area:galeria;
+}
+footer{
+	grid-area:footer;
+}
+/*
+#####################################################################################
+Inicio estilo para el menú
+#####################################################################################
+*/
+/*
+.menu{
+	border:2px solid;
+	border-color:red;
+}
+*/
+.menu nav{
+	/*border:2px solid;
+	border-color:green;
+	*/
+	height:100%;
+	width:100%;
+}
+
+.menu nav ul{
+	height:100%;
+	width:100%;
+	display:flex;
+	flex-direction:row;
+	justify-content:space-evenly;
+	align-items:stretch;
+	flex-wrap:wrap;
+	align-content:center;
+	/*
+	border:2px solid;
+	border-color:grey;
+	*/
+}
+.menu nav ul li  {
+	height:4rem;
+	width:12rem;
+
+	margin:1rem;
+	text-align: center;
+/*
+	border:2px solid;
+	border-color:yellow;
+	*/
+    font-size: 1.8rem;
+    background-color:#53d4ff;
+    box-shadow: inset 0px -3px 0px 0px rgba(0, 0, 0, 0.25);
+    text-shadow: 1px 1px 0px #0C749C;
+    text-transform: uppercase;
+}
+.menu nav ul li {
+	padding-top: 0.5rem;
+}
+header{
+	grid-area:menu;
+}
+div{
+	grid-area:logo;
+}
+/*
+.menu nav,.menu nav ul{
+	height:100%;
+	width:100%;
+}
+*/
+
+/*
+.menu nav ul li a{
+	padding:1rem 1rem;
+}
+*/
+.menu nav ul li,.menu nav ul li a{
+	text-decoration: none;
+	list-style:none;
+}
+
+
+/*
+.menu nav ul li{
+    height:5rem;
+	width:10rem;
+}
+*/
+.menu nav ul  li:hover{
+	background-color:#def7ff;
+	
+}
+
+/*
+#####################################################################################
+Fin estilo para el menú
+#####################################################################################
+*/
+
+/*
+#####################################################################################
+Inicio estilo logo
+#####################################################################################
+*/
+.logo img{
+	height:100%;
+	width:100%;
+}
+
+/*
+#####################################################################################
+Fin estilo para logo
+#####################################################################################
+*/
+
+/*
+#####################################################################################
+Inicio estilo para home
+#####################################################################################
+*/
+.galeria{
+	display:flex;
+	flex-direction:row;
+	justify-content:space-evenly;
+	flex-wrap:wrap;
+}
+
+.galeria .galeria__item{
+	/*Para el alto del section, separa cada foto de manera vertical*/
+	height:49%;
+	width:32%;
+	/*
+	border:1px solid;
+	border-color:black;
+	*/
+}
+.galeria .galeria__item article{
+	/*Para el alto del section, separa cada foto de manera vertical*/
+	margin:0.3rem;
+	/*
+	border:1px solid;
+	border-color:red;
+	*/
+}
+.galeria .galeria__item article .galeria__item__imagen{
+	height:19.5rem;
+	/*En porcentajes para que la imagen no se corte*/
+	width:100%;
+}	
+.galeria .galeria__item article .galeria__item__imagen:hover {
+    opacity: 0.9;
+}
+.galeria .galeria__item article .galeria__item__desc{
+	/*Para que el boton quede siempre en linea (abajo)*/
+	height:4rem;
+    width: 100%;
+	text-align: justify;
+    font-size: 1.5rem;
+}
+.galeria .galeria__item article .galeria__item__btn{
+	height: 2.5rem;
+    width: 100%;
+}
+.galeria .galeria__item article .galeria__item__btn:hover{
+	background-color:#def7ff;
+}
+/*
+#####################################################################################
+Fin estilo para home (index)
+#####################################################################################
+*/
+
+/*
+#####################################################################################
+Inicio estilo para modulos
+#####################################################################################
+*/
+
+
+.modulos .galeria__modulos th,td {
+    padding: 0.3rem;
+    text-align: justify;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 2rem;
+}
+
+.modulos .galeria__modulos tr:hover {
+    background-color: #ddd;
+}
+/*
+#####################################################################################
+Fin estilo para modulos
+#####################################################################################
+*/
+
+
+/*
+#####################################################################################
+Inicio estilo Ubicación
+#####################################################################################
+*/
+
+.ubicacion{
+	display:flex;
+	flex-direction:row;
+	justify-content:space-evenly;
+	flex-wrap:wrap;
+	/*
+	border:2px solid;
+	border-color:red;
+	*/
+}
+
+.ubicacion .ubicacion__section .liceo{
+	height:40rem;
+	width:60rem;
+}
+.ubicacion .ubicacion__section .mapa{
+	height:40rem;
+	width:60rem;
+}
+
+
+/*
+#####################################################################################
+Fin estilo Ubicación
+#####################################################################################
+*/
+
+.modulos .galeria__modulos table{
+	width:100%;
+}
+
+
+/*
+#####################################################################################
+Inicio estilo Contacto
+#####################################################################################
+*/
+
+.form{
+	border:2px solid;
+	height:100%;
+	
+}
+.form .form__section fieldset form{
+	display:flex;
+	flex-direction:row;
+	justify-content:space-evenly;
+	flex-wrap:wrap;
+	/*
+	border:2px solid;
+	border-color:red;
+	*/
+}
+.form .form__section fieldset form label,input,textarea,select{
+	height:3rem;
+	width:100%;
+}
+/*
+#####################################################################################
+Fin estilo Contacto
+#####################################################################################
+*/
+
+
+/*
+#####################################################################################
+Inicio estilo para footer
+#####################################################################################
+*/
+.footer{
+	display:flex;
+	flex-direction:row;
+	justify-content:space-evenly;
+	flex-wrap:wrap;
+	/*Para separar footer de galeria*/
+	margin-top:1rem;
+	background-color:#bceeff;
+}
+.footer .footer__section{
+	/*Para el alto del section, separa cada foto de manera vertical*/
+	height:80%;
+	width:23%;
+	margin:0.5rem;
+}
+
+.footer .footer__section article{
+	padding:0.5rem;
+}
+.footer .footer__section .footer__section__redes {
+	border:1px solid;
+}
+
+/*Animaciones gradientes*/
+
+
+.menu{
+	background-image:linear-gradient(to bottom,#b9ffff,#002973);
+}
+
+
+.footer .footer__section .footer__section__redes img{
+	height:4.5rem;
+	width:4.5rem;
+	padding-top:0.7rem;
+	animation-name:efecto;
+	animation-iteration-count:infinite;
+	animation-timing-function:ease;
+	animation-duration:5s;
+	animation-delay:3s;
+}
+
+
+@keyframes efecto{
+	0%{width:4.5rem;}
+	25%{width:4rem;}
+	50%{width:3.5rem;}
+	75%{width:4rem;}
+	100%{width:4.5rem;}
+}
+
+/*
+.footer .footer__section .footer__section__redes{
+	width:100px;
+	height:100px;
+	background-color:green;
+	animation-name:efecto;
+	animation-iteration-count:infinite;
+	animation-timing-function:ease;
+	animation-duration:2s;
+	animation-delay:5s;
+}
+
+/*
+#####################################################################################
+Fin estilo footer
+#####################################################################################
+*/
+
+/*
+#####################################################################################
+Inicio estilo index 768px
+#####################################################################################
+*/
+
+@media screen and (max-width:768px){
+    .contenedor{
+        display: grid;
+		grid-template-areas: 
+			"menu logo"
+			"galeria galeria"
+			"footer footer";
+		grid-template-columns:80% auto;
+		grid-template-rows:13rem 75% auto;
+		grid-column-gap:1px;
+	    grid-row-gap:1px;
+		align-items:stretch;
+    }
+	.galeria .galeria__item{
+		/*Para el alto del section, separa cada foto de manera vertical*/
+		height:31%;
+		width:47%;
+	}
+	.footer .footer__section{
+		/*Para el alto del section, separa cada foto de manera vertical*/
+		height:7rem;
+		width:40%;
+		padding:0.1rem;
+	}
+	.galeria .galeria__item article{
+		padding:0.3rem;
+	}
+	.galeria .galeria__item article .galeria__item__desc{
+		/*Para que el boton quede siempre en linea (abajo)*/
+		height:5rem;
+		width: 100%;
+		text-align: justify;
+		font-size: 1.5rem;
+	}
+
+	.menu nav ul li  {
+		margin:0.5rem;
+	}
+	
+}
+/*
+#####################################################################################
+Inicio estilo index 768px
+#####################################################################################
+*/
+
+/*
+#####################################################################################
+Inicio estilo index 468px
+#####################################################################################
+*/
+@media screen and (max-width:468px){
+    .contenedor{
+        display: grid;
+		grid-template-areas: 
+			"logo"
+			"menu"
+			"galeria"
+			"footer";
+		grid-template-columns:100%;
+		grid-template-rows:8rem 18rem 75% 15%;
+		grid-column-gap:1px;
+	    grid-row-gap:1px;
+		align-items:stretch;
+    }
+	.galeria .galeria__item{
+		/*Para el alto del section, separa cada foto de manera vertical*/
+		height:16.5%;
+		width:90%;
+		/*
+		border:2px solid;
+		*/
+	}
+	.footer{
+		height:55rem;
+		width:100%;
+		padding:0.1rem;
+		/*
+		border:5px solid;
+		border-color: #002973;
+		*/
+	}
+	.footer .footer__section{
+		/*Para el alto del section, separa cada foto de manera vertical*/
+		height:18%;
+		width:90%;
+		padding:0.1rem;
+		/*
+		border:5px solid;
+		*/
+		
+	}
+	.menu li {
+		margin-top:2.3rem;
+	}
+	/*
+	.modulos .galeria__modulos{
+		display:none;
+	}
+	*/
+	.contenedor .logo{
+		height:100%;
+		width:60%;
+		padding-left:7rem;
+		
+	}
+	.ubicacion .ubicacion__section{
+		height:45%;
+		width:100%;
+		/*
+		border:1px solid;
+		border-color: red;
+		*/
+	}
+	.ubicacion .ubicacion__section article{
+		height:99%;
+		width:99%;
+		/*
+		border:2px solid;
+		border-color: blue;
+		*/
+	}
+	.ubicacion .ubicacion__section article .mapa{
+		height:90%;
+		width:99%;
+	}
+	.ubicacion .ubicacion__section article .liceo{
+		height:90%;
+		width:100%;
+	}
+	.galeria__modulos{
+		border:2px solid;
+		border-color: red;
+
+	}
+	.galeria__modulos table{
+		border:2px solid;
+		border-color: blue;
+
+	}
+}
